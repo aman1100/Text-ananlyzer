@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text utils</title>
+</head>
+<body>
+<h1> Text Analyzer. Enter your text below</h1>
+<form action='\analyzer' method='post'> {% csrf_token %} #cross site request forgery
+    <textarea name= 'text' style="margin: 0px; width: 1219px; height: 117px;"></textarea><br>
+    <input type="checkbox" name = "removePunc"> Remove Punctuations <br>
+    <input type="checkbox" name = "capitalLetters"> CAPITAL LETTERS<br>
+    <input type="checkbox" name = "lowercaseLetters"> lowercase letters<br>
+    <input type="checkbox" name = "removeExtraspaces"> Remove Extra Spaces <br>
+    <input type="checkbox" name = "removeNewLine"> Remove New Line <br>
+
+    <button type="submit">Analyze your text</button>
+
+</form>
+</body>
+</html>
